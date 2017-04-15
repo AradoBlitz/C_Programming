@@ -8,17 +8,8 @@
 #ifndef MAP_
 #define MAP_
 
-typedef struct {
-	void *key;
-	void *value;
-} kvmap_entry_t;
 
-typedef struct {
-	unsigned size, count;
-	kvmap_entry_t *entries;
-	void *userdata;
-
-} kvmap_t;
+typedef void *kvmap_t;
 
 typedef int (*kvmap_key_comparator_t)(const void *k1, const void *k2, void *userdata);
 
