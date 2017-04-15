@@ -1,0 +1,27 @@
+/*
+ * Map
+ *
+ *  Created on: Apr 15, 2017
+ *      Author: vilidmi
+ */
+
+#ifndef MAP_
+#define MAP_
+
+typedef struct {} kvmap_entry_t;
+
+typedef struct {} kvmap_t;
+
+typedef int (*kvmap_key_comparator_t)(const void *k1, const void *k2, void *userdata);
+
+kvmap_t *kvmap_create (kvmap_key_comparator_t compare_keys, void *userdata);
+
+void kvmap_destroy(kvmap_t *map);
+
+void kvmap_set(kvmap_t *map, const void *key, const void *value);
+
+void kvmap_get(kvmap_t *map, const void *key);
+
+void kvmap_remove(kvmap_t * map, const void *key);
+
+#endif /* MAP_ */
