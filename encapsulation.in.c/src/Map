@@ -9,7 +9,7 @@
 #define MAP_
 
 
-typedef void *kvmap_t;
+typedef struct kvmap *kvmap_t;
 
 typedef int (*kvmap_key_comparator_t)(const void *k1, const void *k2, void *userdata);
 
